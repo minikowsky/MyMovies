@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/fragment_my_movies">
+
+    <fragment
+        android:id="@+id/fragment_my_movies"
+        android:name="com.example.mymovies.ui.movies.MyMoviesFragment"
+        android:label="fragment_my_movies"
+        tools:layout="@layout/fragment_my_movies" >
+        <action
+            android:id="@+id/action_myMoviesFragment_to_settingsFragment"
+            app:destination="@id/fragment_settings" />
+        <action
+            android:id="@+id/action_myMoviesFragment_to_moviesListFragment2"
+            app:destination="@id/fragment_movies_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_movies_list"
+        android:name="com.example.mymovies.ui.movies.MoviesListFragment"
+        android:label="fragment_movies_list"
+        tools:layout="@layout/fragment_movies_list" />
+    <fragment
+        android:id="@+id/fragment_settings"
+        android:name="com.example.mymovies.ui.movies.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

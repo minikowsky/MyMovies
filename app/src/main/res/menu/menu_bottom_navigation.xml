@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title=""
+        android:id="@+id/fragment_movies_list"
+        android:icon="@drawable/ic_baseline_search_24"/>
+    <item android:title=""
+        android:id="@+id/fragment_my_movies"
+        android:icon="@drawable/ic_baseline_local_movies_24"/>
+    <item android:id="@+id/fragment_settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="" />
+</menu>
