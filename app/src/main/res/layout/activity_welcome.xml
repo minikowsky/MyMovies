@@ -5,22 +5,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.movies.MainActivity"
+    tools:context=".ui.welcome.WelcomeActivity"
     android:orientation="vertical">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
+        android:id="@+id/fragmentContainerView_welcome"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="9"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_movies"/>
+        app:navGraph="@navigation/nav_welcome"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+        android:id="@+id/bottomNavigationView_welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:menu="@menu/menu_bottom_navigation"/>
+        app:menu="@menu/menu_signin_signup"/>
 
 </LinearLayout>
