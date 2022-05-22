@@ -20,17 +20,18 @@ class SignUpViewModel(private val firebaseAuth: FirebaseAuth): ViewModel() {
     val isSignedUp : LiveData<Boolean> = _isSignedUp
 
     fun register(email: String, password: String) {
-
-        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
-            if(task.isSuccessful) {
-                Log.d("SIGN IN","User $email just signed in!")
-                _isSignedUp.value = true
-            } else {
-                Log.d("SIGN IN","Attempt $email to sign in was refused!")
-                _isSignedUp.value = false
-            }
+        firebaseAuth
+            .createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener{ task ->
+                _isSignedUp.value = if(task.isSuccessful) {
+                    Log.d("SIGN UP","User $email just signed up!")
+                    true
+                } else {
+                    Log.d("SIGN UP","Attempt $email to sign up was refused!")
+                    Log.d("FirebaseAuth", "onComplete" + task.exception?.message)
+                    false
+                }
         }
-
     }
 
     fun registerDataChanged(email: String, password: String, password2: String) {
@@ -39,18 +40,18 @@ class SignUpViewModel(private val firebaseAuth: FirebaseAuth): ViewModel() {
         } else if(!isPasswordValid(password)) {
             _signUpForm.value = SignUpFormState(passwordError = R.string.invalid_password)
         } else if(!isPassword2Valid(password, password2)) {
-
+            _signUpForm.value = SignUpFormState(password2Error = R.string.different_passwords)
         } else {
             _signUpForm.value = SignUpFormState(isDataValid = true)
         }
     }
 
     // A placeholder username validation check
-    private fun isUserNameValid(username: String): Boolean {
-        return if (username.contains('@')) {
-            Patterns.EMAIL_ADDRESS.matcher(username).matches()
+    private fun isUserNameValid(email: String): Boolean {
+        return if (email.contains('@')) {
+            Patterns.EMAIL_ADDRESS.matcher(email).matches()
         } else {
-            username.isNotBlank()
+            email.isNotBlank()
         }
     }
 
@@ -61,7 +62,7 @@ class SignUpViewModel(private val firebaseAuth: FirebaseAuth): ViewModel() {
 
     // A placeholder password2 validation check
     private fun isPassword2Valid(password: String, password2: String): Boolean {
-        return password.equals(password2)
+        return password == password2
     }
 }
 

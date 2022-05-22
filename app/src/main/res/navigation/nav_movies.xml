@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragment_my_movies"
-        android:name="com.example.mymovies.ui.movies.MyMoviesFragment"
+        android:name="com.example.mymovies.ui.movies.mymovies.MyMoviesFragment"
         android:label="fragment_my_movies"
         tools:layout="@layout/fragment_my_movies" >
         <action
@@ -16,15 +16,45 @@
         <action
             android:id="@+id/action_myMoviesFragment_to_moviesListFragment2"
             app:destination="@id/fragment_movies_list" />
+        <action
+            android:id="@+id/action_fragment_my_movies_to_movieFragment"
+            app:destination="@id/movieFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_movies_list"
-        android:name="com.example.mymovies.ui.movies.MoviesListFragment"
-        android:label="fragment_movies_list"
-        tools:layout="@layout/fragment_movies_list" />
+        android:name="com.example.mymovies.ui.movies.movielist.MoviesListFragment"
+        android:label="MoviesListFragment"
+        tools:layout="@layout/fragment_movies_list" >
+        <action
+            android:id="@+id/action_fragment_movies_list_to_movieFragment"
+            app:destination="@id/movieFragment" />
+        <action
+            android:id="@+id/action_fragment_movies_list_to_movieAddFragment"
+            app:destination="@id/movieAddFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_settings"
         android:name="com.example.mymovies.ui.movies.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.mymovies.ui.movies.movieshow.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" >
+        <argument
+            android:name="movieId"
+            app:argType="long"/>
+        <argument
+            android:name="isSeen"
+            app:argType="boolean"/>
+        <argument
+            android:name="stars"
+            app:argType="float"/>
+    </fragment>
+    <fragment
+        android:id="@+id/movieAddFragment"
+        android:name="com.example.mymovies.ui.movies.movieadd.MovieAddFragment"
+        android:label="fragment_movie_add"
+        tools:layout="@layout/fragment_movie_add" />
 </navigation>

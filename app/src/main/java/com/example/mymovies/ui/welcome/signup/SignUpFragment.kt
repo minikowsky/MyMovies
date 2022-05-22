@@ -1,6 +1,8 @@
 package com.example.mymovies.ui.welcome.signup
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +10,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.mymovies.afterTextChanged
 import com.example.mymovies.databinding.FragmentSignupBinding
-import com.example.mymovies.ui.login.afterTextChanged
+import com.example.mymovies.ui.movies.MainActivity
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -56,7 +59,7 @@ class SignUpFragment : Fragment() {
 
         signUpViewModel.isSignedUp.observe(viewLifecycleOwner, Observer{
             if(it) {
-                //TODO: close activity and open new activity
+                Toast.makeText(requireContext(), "Account has been created! Now sign in!", Toast.LENGTH_SHORT).show()
 
             } else {
                 Toast.makeText(requireContext(), "Invalid email or password", Toast.LENGTH_SHORT).show()
@@ -85,7 +88,6 @@ class SignUpFragment : Fragment() {
             if(signUpViewModel.signUpFormState.value?.isDataValid!!){
                 signUpViewModel.register(email.text.toString(), password.text.toString())
             } else {
-
                 Toast.makeText(requireContext(), "Register error!", Toast.LENGTH_SHORT).show()
             }
 
@@ -95,4 +97,5 @@ class SignUpFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }}
+    }
+}

@@ -18,17 +18,16 @@ class SignInViewModel(private val firebaseAuth: FirebaseAuth): ViewModel() {
     val isSignedIn : LiveData<Boolean> = _isSignedIn
 
     fun login(email: String, password: String) {
-
         firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
             if(task.isSuccessful) {
                 Log.d("SIGN IN","User $email just signed in!")
                 _isSignedIn.value = true
             } else {
-                Log.d("SIGN IN","Attempt $email to sign in was refused!")
                 _isSignedIn.value = false
+                Log.d("SIGN IN","Attempt $email to sign in was refused!")
+                Log.d("FirebaseAuth", "onComplete" + task.exception?.message)
             }
         }
-
     }
 
     fun loginDataChanged(email: String, password: String) {

@@ -9,5 +9,35 @@
     <!-- TODO: Clear user data -->
 
     <!-- TODO: Maybe something -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/button_change_lang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Change language"
+            android:layout_marginBottom="30sp"
+            />
 
+        <Button
+            android:id="@+id/button_remove_data"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/black"
+            android:layout_height="wrap_content"
+            android:text="Remove data" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/settings_textView_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:layout_marginVertical="20dp"
+        android:textSize="40sp"
+        android:layout_gravity="center_horizontal"/>
 </FrameLayout>

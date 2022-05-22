@@ -1,4 +1,4 @@
-package com.example.mymovies.ui.movies
+package com.example.mymovies.ui.movies.movielist
 
 import android.annotation.SuppressLint
 import android.util.Log
@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mymovies.R
-import com.example.mymovies.data.Movie
+import com.example.mymovies.data.movie.Movie
 
 class MovieListAdapter(val movies: LiveData<List<Movie>>,
                        private val onItemClicked: (Movie) -> Unit)
@@ -19,7 +19,7 @@ class MovieListAdapter(val movies: LiveData<List<Movie>>,
             val title: TextView = itemView.findViewById(R.id.movie_title)
             val director: TextView = itemView.findViewById(R.id.movie_director)
             val cast: TextView = itemView.findViewById(R.id.movie_cast)
-            val elapsedTime: TextView = itemView.findViewById(R.id.movie_elapsed_time)
+            val duration: TextView = itemView.findViewById(R.id.movie_duration)
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -33,7 +33,7 @@ class MovieListAdapter(val movies: LiveData<List<Movie>>,
         holder.title.text = movies.value?.get(position)?.title
         holder.director.text = movies.value?.get(position)?.director
         holder.cast.text = movies.value?.get(position)?.cast.toString()
-        holder.elapsedTime.text = movies.value?.get(position)?.elapsedTime.toString() + " min"
+        holder.duration.text = movies.value?.get(position)?.duration.toString() + " min"
         holder.itemView.setOnClickListener{
             Log.println(Log.INFO,"INFO",movies.value?.get(position)!!.title)
             onItemClicked(movies.value?.get(position)!!)

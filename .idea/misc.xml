@@ -10,6 +10,8 @@
         <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/layout/activity_welcome.xml" value="0.25" />
         <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/layout/content_login.xml" value="0.14895833333333333" />
         <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/layout/fragment_first.xml" value="0.14895833333333333" />
+        <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/layout/fragment_movie.xml" value="0.33" />
+        <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/layout/fragment_movie_add.xml" value="0.17760416666666667" />
         <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/layout/fragment_movies_list.xml" value="0.25" />
         <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/layout/fragment_my_movies.xml" value="0.259375" />
         <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/layout/fragment_second.xml" value="0.18" />
@@ -18,6 +20,7 @@
         <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/layout/fragment_signup.xml" value="0.17760416666666667" />
         <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/layout/fragment_welcome.xml" value="0.19166666666666668" />
         <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/layout/record_movie.xml" value="0.278515625" />
+        <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/layout/record_user_movie.xml" value="0.19166666666666668" />
         <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.1" />
         <entry key="..\:/SemVI/MIM/MyMovies/app/src/main/res/menu/menu_signin_signup.xml" value="0.19166666666666668" />
       </map>
