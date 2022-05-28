@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:layout_gravity="start"
-        android:text="Title" />
+        android:text="Tytuł" />
     <TextView
         android:id="@+id/show_movie_title"
         android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:layout_gravity="start"
-        android:text="Director" />
+        android:text="Reżyser" />
 
     <TextView
         android:id="@+id/show_movie_director"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:layout_gravity="start"
-        android:text="Duration" />
+        android:text="Czas trwania" />
 
 
     <TextView
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:layout_gravity="start"
-        android:text="Cast" />
+        android:text="Obsada" />
 
     <TextView
         android:id="@+id/show_movie_cast"
@@ -82,7 +82,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:layout_gravity="start"
-        android:text="Rating" />
+        android:text="Ocena" />
 
     <RatingBar
         android:id="@+id/show_movie_rating_bar"

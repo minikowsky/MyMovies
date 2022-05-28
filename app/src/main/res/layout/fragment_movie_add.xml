@@ -15,7 +15,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_height="wrap_content"
-        android:hint="Title" />
+        android:hint="Tytuł" />
 
 
     <EditText
@@ -26,7 +26,7 @@
         android:layout_marginBottom="20dp"
         android:gravity="center"
         android:layout_gravity="center"
-        android:hint="Director" />
+        android:hint="Reżyser" />
 
     <EditText
         android:id="@+id/add_movie_cast"
@@ -35,7 +35,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:hint="cast"/>
+        android:hint="Obsada"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Duration"/>
+                android:text="Czas trwania"/>
             <NumberPicker
                 android:id="@+id/add_movie_duration"
                 android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Add"
+        android:text="Dodaj"
         android:id="@+id/add_movie_button"/>
 
 </LinearLayout>

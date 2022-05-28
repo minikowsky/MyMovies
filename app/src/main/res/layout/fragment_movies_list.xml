@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Movies list"
+        android:text="Baza filmów"
         android:gravity="center_horizontal"
         android:layout_marginVertical="20dp"
         android:textSize="40sp"/>
@@ -23,7 +23,7 @@
         android:id="@+id/fab_add_movie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="Add movie"
+        android:contentDescription="Dodaj film"
         android:layout_gravity="bottom|end"
         android:layout_margin="8dp"
         android:src="@drawable/ic_baseline_add_24"/>
